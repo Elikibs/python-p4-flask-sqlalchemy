@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from models import db
 from flask_migrate import Migrate
 
 app = Flask(__name__)

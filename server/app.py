@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 app = Flask(__name__)
+# configuring database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
+
+# configuring migration
+migrate = Migrate(app, db)
+
+db.init_app(app)
 
 
 if __name__ == '__main__':

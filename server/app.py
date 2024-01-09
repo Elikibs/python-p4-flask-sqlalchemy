@@ -11,6 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 # configuring migration
 migrate = Migrate(app, db)
 
+# app initialization for use with our db configuration
 db.init_app(app)
 
 
